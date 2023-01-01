@@ -1,0 +1,88 @@
+﻿@page "/feedviewer"
+
+<h3>FeedViewerPage</h3>
+
+<div class="main">
+    <div class="top-row">
+        <div class="input-group col-md-5">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnBinUrl">
+                    @if (IsConnected)
+                    {
+                        <span class="oi oi-check text-success" aria-hidden="true" title="Connected"></span>
+                    }
+                    else
+                    {
+                        <span class="oi oi-x text-danger" aria-hidden="true" title="Connection failed"></span>
+                    }
+                    Endpoint
+                </div>
+            </div>
+            <input type="text" class="form-control" readonly="readonly" aria-label="Bin endpoint" aria-describedby="btnBinUrl" value="@endpoint" onfocus="this.select();" onmouseup="return false;">
+
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <BSButtonGroup>
+            <BSButton Color="BSColor.Primary" OnClick="@OnConnect">Connect</BSButton>
+            <BSButton Color="BSColor.Secondary" OnClick="@OnCosmosClicked">Cosmos</BSButton>
+            <BSButton Color="BSColor.Secondary">ServiceBus</BSButton>
+        </BSButtonGroup>
+    </div>
+
+    <div class="content">
+        Received messages:
+        <BSContainer Container="Container.Fluid">
+            @foreach (var feedItem in feedItems)
+            {
+                <BSCard CardType="CardType.Card" Class="mt-3">
+                    <BSCard CardType="CardType.Header" HeadingSize="HeadingSize.H6" IsOutline="true">
+                        <BSLink Target="@feedItem.CorrelationId" MarginEnd="Margins.Medium">@feedItem.EventType - @feedItem.CreatedAt.ToLocalTime()</BSLink>
+                    </BSCard>
+                    <BSCollapse DataId="@feedItem.CorrelationId">
+                        <BSCard CardType="CardType.Title">@feedItem.EventType</BSCard>
+                        <BSCard CardType="CardType.Body">
+                            <pre><code class="language-json">@feedItem.Body</code></pre>
+                        </BSCard>
+                    </BSCollapse>
+
+                </BSCard>
+            }
+        </BSContainer>
+    </div>
+</div>
+
+@code {
+    string? endpoint;
+
+    public bool IsConnected => false;
+
+    List<Message> feedItems = new List<Message>();
+
+    protected override Task OnInitializedAsync()
+    {
+        endpoint = "Test";
+
+        return base.OnInitializedAsync();
+    }
+
+    private void OnConnect()
+    {
+
+    }
+
+    private void OnCosmosClicked()
+    {
+        var feedItem = new Message()
+            {
+                Body = Body,
+                CreatedAt = DateTimeOffset.Now,
+                CorrelationId = Guid.NewGuid().ToString(),
+                MessageId = "1",
+                EventType = "CosmosDbEvent"
+            };
+
+        feedItems.Add(feedItem);
+    }
+}

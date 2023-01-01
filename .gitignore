@@ -342,3 +342,5 @@ ASALocalRun/
 # *.development.json
 # *.localdevelopment.json
 
+src/**/Features/**/*.css
+src/**/Features/**/*.css.map
