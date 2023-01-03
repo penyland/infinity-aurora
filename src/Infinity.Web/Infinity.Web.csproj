@@ -36,10 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\toolkit\src\Toolkit\Toolkit.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Features\FeedViewer\Models\" />
   </ItemGroup>
 

@@ -32,23 +32,31 @@
     </div>
 
     <div class="content">
-        Received messages:
-        <BSContainer Container="Container.Fluid">
-            @foreach (var feedItem in feedItems)
-            {
-                <BSCard CardType="CardType.Card" Class="mt-3">
-                    <BSCard CardType="CardType.Header" HeadingSize="HeadingSize.H6" IsOutline="true">
-                        <BSLink Target="@feedItem.CorrelationId" MarginEnd="Margins.Medium">@feedItem.EventType - @feedItem.CreatedAt.ToLocalTime()</BSLink>
-                    </BSCard>
-                    <BSCollapse DataId="@feedItem.CorrelationId">
-                        <BSCard CardType="CardType.Title">@feedItem.EventType</BSCard>
-                        <BSCard CardType="CardType.Body">
-                            <pre><code class="language-json">@feedItem.Body</code></pre>
-                        </BSCard>
-                    </BSCollapse>
+        <hr class="mt-5 mb-5" />
 
-                </BSCard>
-            }
+        <BSContainer Container="Container.Fluid">
+            <BSAccordion>
+                @foreach (var feedItem in feedItems)
+                {
+                    <BSAccordionItem DefaultShown="false">
+                        <Header><span class="align-middle">@feedItem.CreatedAt.ToString("G") - <span class="fw-bold">@feedItem.EventType</span></span></Header>
+                        <Content>
+                            <BSListGroup>
+                                <BSListGroupItem>MessageId: @feedItem.MessageId</BSListGroupItem>
+                                <BSListGroupItem>ContentType: @feedItem.ContentType</BSListGroupItem>
+                                <BSListGroupItem>CorrelationId: @feedItem.CorrelationId</BSListGroupItem>
+                                <BSListGroupItem>EventType: <span class="fw-bold">@feedItem.EventType</span></BSListGroupItem>
+                                <BSListGroupItem>CreatedAt: @feedItem.CreatedAt.ToString("G")</BSListGroupItem>
+                                <BSListGroupItem>ReceivedAt: @feedItem.ReceivedAt.ToString("G")</BSListGroupItem>
+                                <BSListGroupItem>
+                                    <div>Body:</div>
+                                    <pre><code class="language-json">@feedItem.Body</code></pre>
+                                </BSListGroupItem>
+                            </BSListGroup>
+                        </Content>
+                    </BSAccordionItem>
+                }
+            </BSAccordion>
         </BSContainer>
     </div>
 </div>
