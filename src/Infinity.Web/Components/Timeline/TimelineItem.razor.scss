@@ -1,0 +1,61 @@
+﻿@import "../../Styles/variables.scss";
+@import "Timeline.razor.scss";
+
+/*.timeline-item {
+    display: flex;
+
+    .timeline-item-content {
+        position: relative;
+        height: 100%;
+        flex: 1 1 auto;
+    }
+
+    .timeline-item-divider {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timeline-item-opposite {
+        align-self: center;
+    }
+}*/
+
+/*.timeline-vertical {
+
+    .timeline-item {
+        padding-bottom: 24px;
+
+        .timeline-item-content {
+            position: relative;
+            height: 100%;
+            flex: 1 1 auto;
+            max-width: calc(50% - 48px);
+        }
+
+        .timeline-item-divider {
+            min-width: 96px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-item-opposite {
+            flex: 1 1 auto;
+            max-width: calc(50% - 48px);
+            align-self: center;
+        }
+    }
+}*/
+
+/*    timeline-item-divider::before {
+        top: 0;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 2px;
+        background: $mainColor;
+    }*/

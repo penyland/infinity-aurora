@@ -1,0 +1,10 @@
+﻿@namespace Infinity.Web.Components
+
+@using Infinity.Web.Components.Base
+@inherits InfinityBaseItemsControl<TimelineItem>
+
+<div @attributes="Attributes" class="@ClassNames @Class" style="@Style">
+    <CascadingValue Value="this">
+        @ChildContent
+    </CascadingValue>
+</div>

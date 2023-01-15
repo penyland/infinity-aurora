@@ -1,0 +1,12 @@
+﻿@using Infinity.Web.Components.Base
+
+@namespace Infinity.Web.Components
+
+@inherits InfinityComponentBase
+
+@if (((TabControl)Parent).ActiveTab == this)
+{
+    <div @attributes=Attributes>
+        @Content
+    </div>
+}

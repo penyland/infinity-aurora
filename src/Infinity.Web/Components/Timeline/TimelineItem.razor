@@ -1,0 +1,24 @@
+﻿@using Infinity.Web.Components.Base
+
+@namespace Infinity.Web.Components
+
+@inherits InfinityComponentBase
+
+<div @attributes="@Attributes" class="@ClassNames @Class" style="@Style">
+    <div class="timeline-item-content">
+        @if (ChildContent != null)
+        {
+            @ChildContent
+        }
+    </div>
+    <div class="timeline-item-divider">
+        @if (IconContent != null)
+        {
+            @IconContent
+        }
+        else
+        {
+            <span class="oi oi-circle-check" style="color: green; font-size: 16pt;" aria-hidden="true"></span>
+        }
+    </div>
+</div>

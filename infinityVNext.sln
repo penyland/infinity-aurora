@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infinity.Functions", "src\Infinity.Functions\Infinity.Functions.csproj", "{FBCC0CAF-A8FA-4AB1-BE4C-D48C5B3E73BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infinity.Web.Components", "src\Infinity.Web.Components\Infinity.Web.Components.csproj", "{66047313-B7C2-4F75-9EB2-0AD466ACF4C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +34,10 @@ Global
 		{FBCC0CAF-A8FA-4AB1-BE4C-D48C5B3E73BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBCC0CAF-A8FA-4AB1-BE4C-D48C5B3E73BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBCC0CAF-A8FA-4AB1-BE4C-D48C5B3E73BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66047313-B7C2-4F75-9EB2-0AD466ACF4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66047313-B7C2-4F75-9EB2-0AD466ACF4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66047313-B7C2-4F75-9EB2-0AD466ACF4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66047313-B7C2-4F75-9EB2-0AD466ACF4C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0830965D-FC9E-40A3-8F49-50AAF270CEDC} = {CF4BA27C-FAE8-4F1C-A867-B99A5F5FE748}
 		{FBCC0CAF-A8FA-4AB1-BE4C-D48C5B3E73BC} = {CF4BA27C-FAE8-4F1C-A867-B99A5F5FE748}
+		{66047313-B7C2-4F75-9EB2-0AD466ACF4C1} = {CF4BA27C-FAE8-4F1C-A867-B99A5F5FE748}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE7090A1-6827-456A-875D-E83599D50294}

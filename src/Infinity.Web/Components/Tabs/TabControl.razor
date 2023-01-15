@@ -1,0 +1,18 @@
+﻿@using Infinity.Web.Components.Base
+
+@namespace Infinity.Web.Components
+
+@inherits InfinityBaseItemsControl<TabItem>
+
+<CascadingValue Value="this">
+    <div @attributes=Attributes class="@ClassNames @Class">
+        <div class="tab-container">
+            @ChildContent
+        </div>
+
+    </div>
+</CascadingValue>
+
+<div class="tab-content">
+    @ActiveTab?.Content
+</div>

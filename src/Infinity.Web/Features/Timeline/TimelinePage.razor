@@ -1,0 +1,51 @@
+﻿@page "/timeline"
+@using Infinity.Web.Components
+
+<h3>TimelinePage</h3>
+
+<div class="p-2" style="width: 800px;">
+
+    <Timeline>
+        <TimelineItem>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">TicketCreated</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2023-01-09 10:00</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a h ref="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </TimelineItem>
+        <TimelineItem>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PspPaid</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2023-01-09 10:01</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a h ref="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </TimelineItem>
+        <TimelineItem>
+            <ChildContent>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">TicketActivated</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">2023-01-09 10:02</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a h ref="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </ChildContent>
+            <IconContent><span class="oi oi-circle-check" style="color: blue; font-size: 16pt;" aria-hidden="true"></span></IconContent>
+        </TimelineItem>
+    </Timeline>
+
+</div>
+
+@code {
+
+}

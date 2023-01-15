@@ -1,4 +1,6 @@
 ﻿using Microsoft.ApplicationInsights.Extensibility;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 namespace Infinity.Web.Extensions;
 
@@ -33,7 +35,10 @@ public static class LoggingExtensions
             builder.Host.UseSerilog((context, services, loggerConfiguration) =>
             {
                 loggerConfiguration
-                    .ReadFrom.Configuration(context.Configuration);
+                    .WriteTo.Debug()
+                    .WriteTo.Console(
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] [{SourceContext}] {Message}{NewLine}{Exception}",
+                        theme: AnsiConsoleTheme.Code);
             });
         }
 

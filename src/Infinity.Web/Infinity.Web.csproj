@@ -39,4 +39,12 @@
     <Folder Include="Features\FeedViewer\Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Timeline\Timeline.razor.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Timeline\TimelineItem.razor.scss" />
+  </ItemGroup>
+
 </Project>

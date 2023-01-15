@@ -1,4 +1,5 @@
 using Infinity.Web.Extensions;
+using Serilog;
 
 try
 {
