@@ -4,15 +4,14 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591;NU1505</NoWarn>
-    <RuntimeIdentifiers>win-x64;linux-x64;</RuntimeIdentifiers>
   </PropertyGroup>
 
   <PropertyGroup>
     <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
     <NeutralLanguage>en-US</NeutralLanguage>
     <IsPackable>false</IsPackable>
-    <Authors></Authors>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <Authors>Peter Nylander</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>false</PublishRepositoryUrl>
   </PropertyGroup>
@@ -28,7 +27,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition="!$(MSBuildProjectName.Contains('.Deployment'))">
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="all" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json">
       <Link>Properties\stylecop.json</Link>
     </AdditionalFiles>

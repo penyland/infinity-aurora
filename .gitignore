@@ -345,3 +345,4 @@ ASALocalRun/
 src/**/Features/**/*.css
 src/**/Features/**/*.css.map
 **/wwwroot/**/*.css
+.vscode
